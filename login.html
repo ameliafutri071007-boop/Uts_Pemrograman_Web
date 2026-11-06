@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <main class="login-container">
+        <section class="login-box">
+            <h1>Toko Buku Online</h1>
+            <p>Silakan login untuk melanjutkan</p>
+
+            <form id="formLogin">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Masukkan email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Masukkan password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <div class="login-links">
+                <button type="button" onclick="bukaModal('modalLupa')">
+                    Lupa Password?
+                </button>
+
+                <button type="button" onclick="bukaModal('modalDaftar')">
+                    Daftar
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Lupa Password -->
+    <div id="modalLupa" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="tutupModal('modalLupa')">&times;</span>
+            <h2>Lupa Password</h2>
+            <p>Silakan hubungi admin untuk bantuan reset password.</p>
+        </div>
+    </div>
+
+    <!-- Modal Daftar -->
+    <div id="modalDaftar" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="tutupModal('modalDaftar')">&times;</span>
+            <h2>Daftar Akun</h2>
+            <p>Silakan hubungi admin untuk membuat akun baru.</p>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

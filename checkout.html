@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <h2>Pemesanan Buku</h2>
+        <a href="dashboard.html">Kembali ke Dashboard</a>
+    </header>
+
+    <main class="checkout-container">
+
+        <h1>Form Pemesanan</h1>
+        <p>Silakan lengkapi informasi pemesanan buku.</p>
+
+        <section class="checkout-box">
+            <h2>Informasi Pemesan</h2>
+
+            <form id="formCheckout">
+
+                <label>Nama Pemesan</label>
+                <input type="text" id="namaPemesan" required>
+
+                <label>Email</label>
+                <input type="email" id="emailPemesan" required>
+
+                <label>Alamat Pengiriman</label>
+                <textarea id="alamatPemesan" required></textarea>
+
+                <h2>Detail Pesanan</h2>
+
+                <label>Pilih Buku</label>
+                <select id="pilihBuku" required>
+                    <option value="">-- Pilih Buku --</option>
+                </select>
+
+                <label>Jumlah Buku</label>
+                <input type="number" id="jumlahBuku" min="1" value="1" required>
+
+                <p id="totalHarga">Total: Rp 0</p>
+
+                <h2>Informasi Pembayaran</h2>
+
+                <label>Metode Pembayaran</label>
+                <select id="metodePembayaran" required>
+                    <option value="">-- Pilih Pembayaran --</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                    <option value="E-Wallet">E-Wallet</option>
+                    <option value="COD">COD</option>
+                </select>
+
+                <button type="submit">Buat Pesanan</button>
+
+            </form>
+        </section>
+
+        <section class="checkout-box" id="laporan">
+            <h2>Laporan Pemesanan</h2>
+            <div id="hasilPemesanan">
+                Belum ada pesanan.
+            </div>
+        </section>
+
+        <section class="checkout-box" id="riwayat">
+            <h2>History Transaksi</h2>
+            <div id="riwayatTransaksi">
+                Belum ada transaksi.
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

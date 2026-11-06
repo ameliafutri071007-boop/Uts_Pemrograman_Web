@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Stok Buku</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <h2>Katalog Buku</h2>
+        <a href="dashboard.html">Kembali ke Dashboard</a>
+    </header>
+
+    <main class="stok-container">
+
+        <h1>Informasi Stok Buku</h1>
+        <p>Daftar persediaan buku toko online.</p>
+
+        <div class="form-stok">
+            <h2>Tambah Stok Buku</h2>
+
+            <form id="formStok">
+                <input type="text" id="kodeBarang" placeholder="Kode Barang" required>
+                <input type="text" id="namaBarang" placeholder="Nama Buku" required>
+                <input type="text" id="jenisBarang" placeholder="Jenis Buku" required>
+                <input type="text" id="edisi" placeholder="Edisi" required>
+                <input type="number" id="jumlahStok" placeholder="Jumlah Stok" min="1" required>
+                <input type="text" id="harga" placeholder="Harga (contoh: Rp 100.000)" required>
+
+                <button type="submit">Tambah Buku</button>
+            </form>
+        </div>
+
+        <div class="tabel-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kode</th>
+                        <th>Cover</th>
+                        <th>Nama Buku</th>
+                        <th>Jenis</th>
+                        <th>Edisi</th>
+                        <th>Stok</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelBuku"></tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

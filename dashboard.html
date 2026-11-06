@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <h2>Toko Buku Online</h2>
+        <button onclick="logout()">Logout</button>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="welcome-box">
+            <h1 id="greeting">Selamat Datang</h1>
+            <p id="namaPengguna">Pengguna</p>
+            <p>Selamat berbelanja di Toko Buku Online.</p>
+        </section>
+
+        <section class="menu-dashboard">
+            <h2>Menu Utama</h2>
+
+            <div class="menu-grid">
+
+                <a href="stok.html" class="menu-card">
+                    <h3>Informasi Stok/Katalog</h3>
+                    <p>Lihat daftar dan persediaan buku.</p>
+                </a>
+
+                <a href="tracking.html" class="menu-card">
+                    <h3>Tracking Pengiriman</h3>
+                    <p>Lacak status pengiriman pesanan.</p>
+                </a>
+
+                <a href="checkout.html#laporan" class="menu-card">
+                    <h3>Laporan Pemesanan</h3>
+                    <p>Lihat informasi pemesanan buku.</p>
+                </a>
+
+                <a href="checkout.html#riwayat" class="menu-card">
+                    <h3>History Transaksi</h3>
+                    <p>Lihat riwayat transaksi pembelian.</p>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
