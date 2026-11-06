@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f0f4f8;
+    min-height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-box {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.login-box h1 {
+    text-align: center;
+    color: #2457a6;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.login-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.login-box form button {
+    width: 100%;
+    padding: 12px;
+    background: #2457a6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    opacity: 0.85;
+}
+
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.login-links button {
+    background: none;
+    border: none;
+    color: #2457a6;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Dashboard */
+
+.dashboard-header {
+    background: #2457a6;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-header button {
+    background: white;
+    color: #2457a6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dashboard-container {
+    padding: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.welcome-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.welcome-box h1 {
+    color: #2457a6;
+    margin-bottom: 10px;
+}
+
+.welcome-box p {
+    margin-top: 8px;
+    color: #666;
+}
+
+.menu-dashboard h2 {
+    margin-bottom: 20px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.menu-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    background: #eaf1ff;
+}
+
+.menu-card h3 {
+    color: #2457a6;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    color: #666;
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        padding: 15px 20px;
+    }
+
+    .dashboard-container {
+        padding: 20px;
+    }
+}
+
+/* Halaman Stok Buku */
+
+.stok-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.stok-container h1 {
+    color: #2457a6;
+    margin-bottom: 10px;
+}
+
+.stok-container > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-stok {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.form-stok h2 {
+    margin-bottom: 20px;
+}
+
+#formStok {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+#formStok input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#formStok button {
+    background: #2457a6;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tabel-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.tabel-container table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+.tabel-container th,
+.tabel-container td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabel-container th {
+    background: #2457a6;
+    color: white;
+}
+
+.tabel-container img {
+    width: 55px;
+    height: 75px;
+    object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    #formStok {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Halaman Checkout */
+
+.checkout-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.checkout-container h1 {
+    color: #2457a6;
+    margin-bottom: 10px;
+}
+
+.checkout-container > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.checkout-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.checkout-box h2 {
+    margin-bottom: 20px;
+    color: #2457a6;
+}
+
+#formCheckout label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#formCheckout input,
+#formCheckout select,
+#formCheckout textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+#formCheckout textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+#formCheckout button {
+    width: 100%;
+    padding: 13px;
+    background: #2457a6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#formCheckout button:hover {
+    background: #17417f;
+}
+
+#totalHarga {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2457a6;
+    margin-bottom: 25px;
+}
+
+#hasilPemesanan,
+#riwayatTransaksi {
+    line-height: 1.8;
+}
+
+/* Halaman Tracking */
+
+.tracking-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.tracking-container h1 {
+    color: #2457a6;
+    margin-bottom: 10px;
+}
+
+.tracking-container > p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.tracking-box {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.tracking-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.tracking-search {
+    display: flex;
+    gap: 10px;
+}
+
+.tracking-search input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.tracking-search button {
+    padding: 12px 25px;
+    background: #2457a6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.tracking-result {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.tracking-result h2 {
+    color: #2457a6;
+    margin-bottom: 15px;
+}
+
+.tracking-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.tracking-info div {
+    padding: 15px;
+    background: #f0f4f8;
+    border-radius: 6px;
+}
+
+.tracking-info strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.status-pengiriman {
+    color: #16834a;
+    font-weight: bold;
+}
+
+.perjalanan {
+    border-left: 3px solid #2457a6;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.perjalanan-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.perjalanan-item::before {
+    content: "";
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #2457a6;
+    border-radius: 50%;
+}
+
+.perjalanan-item p {
+    margin-top: 5px;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .tracking-info {
+        grid-template-columns: 1fr;
+    }
+
+    .tracking-search {
+        flex-direction: column;
+    }
+}
